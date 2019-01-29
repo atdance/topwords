@@ -1,4 +1,4 @@
-#Forex Market Trade Processor
+#Top ten words
 
 
 Create a command-line Java program that counts unique words from a text file and lists the top 10 occurrences.
