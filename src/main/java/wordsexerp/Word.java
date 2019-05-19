@@ -4,7 +4,7 @@ package wordsexerp;
  * represents a string , constraint are applied on its constructor.
  *
  */
-public class Word {
+public class Word implements Comparable<Word> {
 
 	final private String word;
 
@@ -53,6 +53,11 @@ public class Word {
 			return false;
 		}
 		return true;
+	}
+
+	@Override
+	public int compareTo(Word arg0) {
+		return this.word.compareToIgnoreCase(arg0.word);
 	}
 
 }
