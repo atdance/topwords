@@ -13,6 +13,16 @@ import org.junit.Test;
 public class FrequencyTableTest {
 
 	@Test
+	public void shouldHaveOneElementWhenAllInsertedWordsAreEqual() {
+		final List<Word> wordsUnderTest = Arrays.asList(new Word("aaa"), new Word("aaa"), new Word("aaa"),
+				new Word("aaa"));
+
+		Map<Word, Long> frequencyTable = FrequencyTable.build(wordsUnderTest);
+
+		assertTrue(frequencyTable.size() == 1);
+	}
+
+	@Test
 	public void shouldHaveLessthanTenValueElements() {
 		final List<Word> wordsUnderTest = Arrays.asList(new Word("aaa"), new Word("bbbb"), new Word("bzzz"),
 				new Word("baaa"));
@@ -51,14 +61,14 @@ public class FrequencyTableTest {
 	 * This is a test for a boundary condition
 	 */
 	@Test
-	public void shouldHaveTenValueElementsWhenInputConsistsOfTenElements() {
+	public void shouldHaveTenValueElementsWhenInputConsistsOfTenDifferentElements() {
+		final int TEN = 10;
+
 		List<Word> words = new ArrayList<>();
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < TEN; i++) {
 			words.add(new Word("a" + i));
 		}
 		List<Word> wordsUnderTest = new ArrayList<>();
-
-		final int TEN = 10;
 
 		for (Word word : words) {
 			for (int i = 0; i < TEN; i++) {
