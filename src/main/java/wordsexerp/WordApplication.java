@@ -13,7 +13,7 @@ public class WordApplication {
 	 * the top 10 occurrences
 	 * 
 	 *
-	 * Limitations: It has an untested behavior with files that do not contain text
+	 * Limitations: It has an untested behavior with files that do not contain text.
 	 * . It does not work with lists of words larger that Integer.MAX_VALUE.
 	 *
 	 * @param args
@@ -42,6 +42,7 @@ public class WordApplication {
 		for (Entry<Word, Long> entry : entries) {
 			System.out.printf("%s (%s)%n", entry.getKey(), entry.getValue());
 		}
+
 	}
 
 }
