@@ -9,13 +9,11 @@ import java.util.Map;
  */
 public class TopSortedWords {
 
-	public synchronized Map<Word, Long> getWords(List<Word> words) {
+	synchronized Map<Word, Long> getWords(List<Word> words) {
 
 		Map<Word, Long> frequencyTable = FrequencyTable.build(words);
 
-		Map<Word, Long> firstTen = Top.sortAndGetTopTen(frequencyTable, 10);
-
-		return firstTen;
+		return Top.sortAndGetTopWords(frequencyTable, 10);
 	}
 
 }

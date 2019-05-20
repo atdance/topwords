@@ -19,7 +19,7 @@ public class Top {
 	 * @param maxSize
 	 * @return the sorted top 10 entries in the map
 	 */
-	static Map<Word, Long> sortAndGetTopTen(Map<Word, Long> map, long maxSize) {
+	static Map<Word, Long> sortAndGetTopWords(Map<Word, Long> map, long maxSize) {
 
 		final LinkedHashMap<Word, Long> res = map.entrySet().stream()
 				.sorted(Collections.reverseOrder(Map.Entry.comparingByValue())).limit(maxSize)
