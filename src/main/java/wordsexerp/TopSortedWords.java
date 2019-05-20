@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class TopSortedWords {
 
-	synchronized Map<Word, Long> getWords(List<Word> words) {
+	public synchronized Map<Word, Long> getWords(List<Word> words) {
 
 		Map<Word, Long> frequencyTable = FrequencyTable.build(words);
 
